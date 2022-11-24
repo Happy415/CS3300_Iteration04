@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CS3300 Portfolio Project</title>
+
+  </head>
+  
+  <body>
+    <div style="margin: 5% 0 0 10%;">
+    <h1>Projects</h1>   
+    <h1>CS 3300 Portfolio Project - Fall 2022</h1>
+
+      <div style="padding-left: 2rem;">
+        <h4 style="color: blue"> [Alexander Traffis] </h3>
+        
+
+        <!--- Explain what the block of code below this line is doing --->
+
+        <!-- This checks if the user is signed in, if they are, the code inside -->
+        <!-- will execute. -->
+        <% if user_signed_in? %>
+          
+        <!-- Displays the user's email that they signed in with and have set as their current email -->
+        <div> Welcome <%= current_user.email %> </div>
+
+        <!-- This will destroy the user session path, making it so that the user will not have access to -->
+        <!-- anything that being signed in allows to them. -->
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+        
+        <!-- If the user is not signed in, use a link connecting to the sign in page inside the users directory -->
+        <!-- to allow them to sign in -->
+        <% else %>
+          <a href="/users/sign_in"> Sign in</a>
+        <% end %>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,7 +4,7 @@ require 'rails_helper'
   #pending "add some examples to (or delete) #{__FILE__}"
 #end
 
-RSpec.describe Object, type: :model do
+RSpec.describe Project, type: :model do
   context "validations tests" do
     it "ensures the description is present" do
       project = Project.new(description: "Content of the description")

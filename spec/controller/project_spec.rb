@@ -1,33 +1,21 @@
-require 'rails_helper'
+require 'rails_helper' #use rails' built in helper methods
 
-# This is testing the controller to see if it is doing the steps below
-RSpec.describe ProjectsController, type: :controller do 
-
-    # This test happens when the get command is used to call the index method
-    context "GET #index" do
-
+RSpec.describe ProjectsController, type: :controller do #test fot the project controller; it should do the following
+    context "GET #index" do #when calling the index method with the get command ...
         it "returns a success response" do
-
-            # This is where the actual command is carried out and the response is tested after
             get :index
-
-            # This takes the response and tests if it was returned as successful
-            # The test will fail if the result is unsuccessful
+            # the response of this call should be successful. i.e projects variable in the project controller should equal all the projects in the database
             expect(response).to be_successful
         end
     end
 
-    # This section is testing when the get command calls the show method
+    #the above test checked if the project controller is able to access the database
+
     context "Get #show" do
-
-        # This creates a test project for the test to work on
-        let!(:project) { Project.create(title: "Test title", description: "Test Description") }
+    #when calling the method show from a get request...
+        let!(:project) { Project.create(title: "Test title", description: "Test Description") } #create a dummy project to run a test on
         it "returns a success response" do
-
-            # In response to the call by the get command on show the test project should be shown
-            get :show, params: { id: project }
-
-            # This response is also expected to be successful.
+            get :show, params: { id: project } #in response to show call, there should be a successful response displaying the project
             expect(response).to be_successful
         end
     end

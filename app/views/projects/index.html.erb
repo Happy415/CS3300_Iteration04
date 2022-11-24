@@ -1,14 +1,128 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+/* beginning of styling classes for introduction */
+.headingstyle{
+  text-align: center;
+  font-size: 16 px;
+  color: #303030;
+  font-family:Verdana, sans-serif;
+  
+}
 
-<h1>Projects</h1>
+.paragraphstyle{
+  font-size: 13 px;
+  color: #303030;
+  font-family:Verdana, sans-serif;
+}
 
-<div id="projects">
-  <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
-  <% end %>
+tab1 { padding-left: 4em; }
+/* end of styling classes for introduction */
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Sign in</a>
+          <a class="dropdown-item" href="#">Sign up</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+<h1 class = "headingstyle"> Emily Ng </h1>
+<p class = "paragraphstyle">
+  <tab1>Determined, detail-oriented, and adaptable <a target = "_blank" title = "More about the degree" href ="https://eas.uccs.edu/cs/academics/graduate-programs/master-of-science-in-computer-science" style = "color: bluegray">Masters of Science in Computer Science </a> student passionate about coding, data science, and game theory. </tab1> 
+  Experienced in computational mathematical economics through both theoretical and practical applications of game theory, probability theory, economic theory, socioeconomic theory, and advanced statistical modeling. 
+  Worked in community engagement, journalism, and on various teams. 
+  Honed verbal and written communication skills as a multimedia journalist at The Colorado College Catalyst, The Colorado Springs Independent, and KKTV News.
+</p>
 </div>
 
-<%= link_to "New project", new_project_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h6><tab1> Programming Languages </tab1></h6>
+      <ul style="list-style-type:circle""color: #303030"
+      "font-family:Verdana, sans-serif">
+      <li> Java </li>
+      <li> C </li>
+      <li> Bash</li>
+      <li> Python </li>
+      <li> Ruby </li>
+      <li> R </li>
+      <li> STATA </li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h6><tab1>Technical Skills</tab1></h6>
+      <ul style="list-style-type:circle""color: #303030"
+      "font-family:Verdana, sans-serif" "font-size: 10px">
+      <li> Agile proccess development </li>
+      <li> Executed software development and the usage of software development tools</li>
+      <li> Fluent in Object-oriented programming</li>
+      <li> Experienced in Procedural Programming </li>
+      <li> Skilled in using debuggers, editors and file systems </li>
+      <li> Understood and Implemented dynamic memory allocation </li>
+      <li> Well-versed in data analysis</li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h6><tab1>Soft Skills</tab1></h6>        
+      <ul style="list-style-type:circle""color: #303030"
+      "font-family:Verdana, sans-serif">
+      <li> Adaptibility/Flexibility </li>
+      <li> Teamwork/Collaboration </li>
+      <li> Communication </li>
+      <li> Problem Solving </li>
+      <li> Critical Thinking </li>
+      <li> Leadership </li>
+      <li> Decisiveness </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Project 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <button type="button" class="btn btn-outline-primary" href = "#"> Show this project >> </button>
+
+      <h3>Project 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <button type="button" class="btn btn-outline-primary" href = "#"> Show this project >> </button>
+    </div>
+    
+</div>
+
+</body>
+</html>
